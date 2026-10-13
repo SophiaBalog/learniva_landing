@@ -37,3 +37,11 @@ export const Cta: Block = {
     { name: 'buttonUrl', type: 'text', required: true },
   ],
 }
+
+export const CourseList: Block = {
+  slug: 'courseList',
+  fields: [
+    { name: 'title', type: 'text', defaultValue: 'Популярні курси' },
+    { name: 'limit', type: 'number', defaultValue: 3, min: 1, max: 12 },
+  ],
+}
