@@ -57,3 +57,36 @@ export type CtaBlock = BaseBlock & {
   buttonLabel: string
   buttonUrl: string
 }
+
+
+export type Block =
+  | HeroBlock
+  | TextBlock
+  | CourseListBlock
+  | GalleryBlock
+  | CtaBlock
+
+export type Page = {
+  id: number
+  title: string
+  slug: PageSlug
+  layout: Block[]
+  updatedAt: string
+  createdAt: string
+}
+
+export type Course = {
+  id: number
+  title: string
+  description?: string | null
+  price?: number | null
+  featured?: boolean | null
+  image?: MediaRef | null
+}
+
+
+export type PageState =
+  | { status: 'loading' }
+  | { status: 'success'; data: Page }
+  | { status: 'notFound' }
+  | { status: 'error'; message: string }
