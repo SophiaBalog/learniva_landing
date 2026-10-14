@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { Hero, TextBlock, Gallery, Cta } from '../blocks'
+import { Hero, TextBlock, Gallery, Cta, CourseList } from '../blocks'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -8,6 +8,6 @@ export const Pages: CollectionConfig = {
   fields: [
     { name: 'title', type: 'text', required: true },
     { name: 'slug', type: 'text', required: true, unique: true, index: true },
-    { name: 'layout', type: 'blocks', required: true, blocks: [Hero, TextBlock, Gallery, Cta] },
+    { name: 'layout', type: 'blocks', required: true, blocks: [Hero, TextBlock, Gallery, Cta,CourseList] },
   ],
 }

@@ -7,6 +7,9 @@ const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
 
 const nextConfig: NextConfig = {
+  // Дозволяємо доступ із зовнішнього IP без помилок TypeScript
+  ...( { allowedDevOrigins: ['192.168.56.1'] } as any ),
+  
   images: {
     localPatterns: [
       {
