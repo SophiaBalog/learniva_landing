@@ -4,6 +4,8 @@ import { renderBlocks } from './render'
 import { loadCourses } from './blocks/courses/courses'
 import { loadingHtml, notFoundHtml, errorHtml } from './states'
 import type { PageState } from './types'
+import { renderHeader } from './components/header'
+import { initSignupModal } from './components/modals'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
@@ -48,4 +50,7 @@ async function load(): Promise<void> {
   }
 }
 
+renderHeader()
+initSignupModal()
+load()
 load()

@@ -1,7 +1,7 @@
 import './text.css'
 import type { TextBlock } from '../../types'
 
-export function text(block:TextBlock){
+export function text(block:TextBlock): string{
     return `
         <section class="text container">
             <h2>${block.title}</h2>

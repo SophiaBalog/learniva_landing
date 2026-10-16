@@ -3,7 +3,7 @@ import type { CourseListBlock, Course } from '../../types'
 import { getFeaturedCourses, mediaUrl } from '../../api'
 
 
-function courseCard(c: Course){
+function courseCard(c: Course):string{
     const imageUrl = c.image?.url ? mediaUrl(c.image.url) : ''
     return `
         <article class="course-card">

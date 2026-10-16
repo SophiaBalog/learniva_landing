@@ -1,0 +1,59 @@
+.modal {
+  padding: 0;
+  width: min(92vw, 420px);
+  color: var(--text);
+  background: #1a0b26;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: 0 0 60px rgba(168, 85, 247, 0.35);
+}
+
+.modal::backdrop {
+  background: rgba(14, 6, 22, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.modal__box {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.modal__label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.modal__input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font: inherit;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+}
+
+.modal__input:focus {
+  outline: 2px solid var(--accent);
+}
+
+.modal__close {
+  justify-self: end;
+}
+
+.modal__error {
+  margin: 0;
+  min-height: 1.2em;
+  font-size: 0.85rem;
+  color: #ff7ab8;
+}
+
+.modal__input--invalid {
+  border-color: #ff7ab8;
+}

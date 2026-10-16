@@ -2,7 +2,7 @@ import './hero.css'
 import type { HeroBlock } from '../../types'
 import { mediaUrl } from '../../api'
 
-export function hero(block: HeroBlock) {
+export function hero(block: HeroBlock): string {
 
     const imageUrl = block.image?.url ? mediaUrl(block.image.url) : ''
     const bg = imageUrl ? `style="background-image:url('${imageUrl}')"` : ''
